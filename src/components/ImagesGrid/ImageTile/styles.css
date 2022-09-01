@@ -1,0 +1,44 @@
+.tile-view {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tile-view:hover .tile-view__image {
+  opacity: 0.5;
+}
+
+.tile-view:active .tile-view__image {
+  opacity: 1;
+  border: 7px solid black;
+}
+
+.tile-view:hover .tile-view__description {
+  opacity: 1;
+}
+
+.tile-view:active .tile-view__description {
+  opacity: 0;
+}
+
+.tile-view__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.tile-view__description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  transition: .5s ease;
+}
+
+.tile-view__description-text {
+  color: black;
+  font-size: 30px;
+  padding: 16px 32px;
+}
